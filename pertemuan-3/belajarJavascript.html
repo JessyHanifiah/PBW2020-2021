@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Part 1 : pengertian dan pengenalan JavaScript-->
+    <!--
+        JavaScript berguna untuk membuat fitur fitur serta efek yang membuat halaman website lebih menarik
+        -javascript dapat engganti atribut html
+        -javascript dapat mengganti style css
+        -javascript dapat membuat form validasi
+    -->
+</head>
+<body>
+    <h3>Part 2 : cara penulisan dan penggunaan JavaScript</h3>
+    <!--
+       cara penulisan syntax javascript
+       -ekstensi .js
+       -disisipkan pada halaman HTML/PHP 
+    -->
+    <!--contoh-->
+    <div id = "internal"></div>
+    <!--internal-->
+    <script>
+        document.getElementById("internal").innerHTML = "JavaScript Internal";
+    </script>
+    <!--external-->
+    <div id = "external"></div>
+    <script type "text/javascript" src="belajarJavaScript.js"></script>
 
+    <h3>Part 3 : mengenal variabel dalam JavaScript</h3>
+    <!--
+        cara penulisan variabel di JavaScript
+        -huruf,angka,tanda dollar
+        -awal variabel huruf
+        -case sensitive
+        -tidak ada spasi
+        -variabel JavaScript diawali "var"
+    -->
+    <!--contoh-->
+    <div id = "variabelSatu"></div>
+    <div id = "variabelDua"></div>
+    <script>
+        var variabelSatu = "ini variabel satu";
+        var variabelDua = "ini variabel dua";
+        document.getElementById("variabelSatu").innerHTML = variabelSatu;
+        document.getElementById("variabelDua").innerHTML = variabelDua;
+    </script>
+
+    <h3>Part 4 : operator aritmatika pada JavaScript</h3>
+    <div id "perkalian"></div>
+    <script>
+    var bilangan1 = 6;
+    var bilangan2 = 6;
+    var perkalian = bilangan1 * bilangan2;
+    document.write(perkalian);
+    </script>
+
+    <h3>Part 5 : tipe data JavaScript</h3>
+    <!--
+        ada 5 tipe data
+        -Number
+        -String
+        -Boolean
+        -Array
+        -Object
+    -->
+    <div id = "tipedata"></div>
+    <script>
+    var angka = 80; // number atau integer
+    var kalimat = "hello world"; //String
+    var hewan = ["kambing", "bebek", "ayam"]; //array
+    var manusia = {
+        nama : "Jessy Hanifiah",
+        umur : 19
+    };//Object
+    document.getElementById("tipedata").innerHTML = hewan;
+    </script>
+
+    <h3>Part 6 : membuat function di JavaScript</h3>
+    <div id = "fungsi"></div>
+    <script>
+        function tampilkan_nama(){
+            return "nama ditampilkan";
+        }
+        document.getElementById("fungsi").innerHTML = tampilkan_nama();
+    </script>
+
+    <h3>Part 7 : mengenal event pada JavaScript</h3>
+    <!--
+        1. onclick
+        2. onchange
+        3. onmouseover
+        4. onmouseout
+        5. onkeydown
+        6. onload
+    -->
+    <button onclick = "tampilkan_event()"> Klik Saya</button>
+    <div id="event"></div>
+	<script>		
+		// membuat function tampilkan_nama
+		function tampilkan_event(){
+			document.getElementById("event").innerHTML = "ini event";
+		}	
+	</script>
+
+    <h3>Part 8 : string pada JavaScript</h3>
+    <div id = "tandapetik"></div>
+    <script>
+        var kata = 'tanda petik dua "hello"';
+        document.getElementById("tandapetik").innerHTML = kata;
+    </script>
+    
+    <h3>Part 9 : menampilkan tanggal dengan Javascript</h3>
+    <div id = "tanggal"></div> 
+    <script>
+        var vtanggal = new Date();
+        document.getElementById("tanggal").innerHTML = vtanggal;
+    </script>
+
+    <h3>Part 10 : switch case pada JavaScript</h3>
+    <div id = "pilih"></div>
+    <script>
+        var warna = "pink";
+        switch (warna){
+            case "hitam":
+                teks = "warna hitam";
+                break;
+            case "merah":
+                 teks = "warna merah";
+            default:
+                teks = "warna default";
+        }
+        document.getElementById("pilih").innerHTML = teks;
+    </script>
+
+    <h3>Part 11 : perulangan for pada JavaScript</h3>
+    <div id = "ulang"></div>
+    <script>
+            var text = "";
+            var x;
+            for(x=0; x<=10;x++){
+                text += "Angka " +x+ "<br>";
+            } 
+            document.getElementById("ulang").innerHTML = text;
+    </script>
+
+    <h3>Part 12 : manipulasi String pada JavaScript</h3>
+    <ul>
+        <li>length</li>
+        <p id = "contoh1"></p>
+        <script>
+            var nama = "Jessy Hanifiah";
+            document.getElementById("contoh1").innerHTML = nama.length;
+        </script>
+        <li>indexOf() dan LastindexOf()</li>
+        <p id = "contoh2"></p>
+        <script>
+            var huruf = "A";
+            var temukan = huruf.indexOf("A");
+            document.getElementById("contoh2").innerHTML = temukan;
+        </script>
+        <li>search()</li>
+        <p id = "contoh3"></p>
+        <script>
+            var kalimat = "saya suka javascript";
+            var cari = kalimat.search("suka");
+            document.getElementById("contoh3").innerHTML = cari;
+        </script>
+        <li>slice()</li>
+        <p id = "contoh4"></p>
+        <script>
+            var kalimat = "saya suka javascript";
+            var filter = kalimat.slice(2,5);
+            document.getElementById("contoh4").innerHTML = filter;
+        </script>
+        <li>replace()</li>
+        <p id = "contoh5"></p>
+        <script>
+            var kalimat = "belajar javascript";
+            var ganti = kalimat.replace("javascript", "php");
+            document.getElementById("contoh5").innerHTML= ganti;
+        </script>
+        <li>toUpperCase dan toLowerCase()</li>
+        <p id = "besar"></p>>
+        <p id = "kecil"></p>
+        <script>
+            var kata = "javascript"
+            var a = kata.toUpperCase();
+            var b = kata.toLowerCase();
+            document.getElementById("besar").innerHTML = a;
+  	        document.getElementById("kecil").innerHTML = b;
+        </script>
+        <li>concat()</li>
+        <p id = "contoh6"></p>
+        <script>
+            var a = "keep";
+            var b = "cool";
+            var gabung = a.concat(" ",b);
+            document.getElementById("contoh6").innerHTML = gabung; 
+        </script>
+        <li>split() -> convert array</li>
+        <p id = "contoh7"></p>
+        <script>
+           var huruf = "a,b,c";
+           var convert = huruf.split("","");
+           document.getElementById("contoh7").innerHTML = convert[0];
+        </script>
+    </ul>
+</body>
+</html>
